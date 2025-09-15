@@ -1,0 +1,11 @@
+# Ignore node_modules for frontend
+/frontend/node_modules/
+
+# Ignore .env files for backend and frontend
+/backend/laravel/.env
+/frontend/.env
+
+# Ignore OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
