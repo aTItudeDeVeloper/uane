@@ -1,17 +1,16 @@
-import React from 'react'; 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { fetchCourses } from "../services/api";
 
 function CourseList() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     async function loadCourses() {
       try {
         const response = await fetchCourses();
-      
         setCourses(response.data || response);
       } catch (err) {
         setError(err.message);
@@ -22,58 +21,95 @@ function CourseList() {
     loadCourses();
   }, []);
 
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -clientWidth : clientWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
   if (loading) return <p>Carregando cursos...</p>;
   if (error) return <p>{error}</p>;
 
   return (
-    <section className="container mx-auto px-6 md:px-8 py-6" id="courses">
-        <h2 className="text-2xl font-bold mb-4">Cursos</h2>
-        <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-hide">
-            {courses.map((course) => (
+    <section className="container mx-auto px-6 md:px-8 py-6 relative" id="courses">
+      <h2 className="text-2xl font-bold mb-4 font-Noto text-[34px]">Cursos</h2>
+
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-hidden gap-4 snap-x snap-mandatory scrollbar-hide scroll-smooth"
+        >
+          {courses.map((course) => (
             <div
-                key={course.id}
-                className="bg-[#17254D] text-white
+              key={course.id}
+              className="
+                bg-[#17254D] text-white font-Noto
                 flex-shrink-0
-                w-[calc(100%-1rem)]        /* Mobile: 1 card + parte do próximo */
-                sm:w-[calc(50%-1rem)]      /* Tablet 768px: 2 cards + parte do 3º */
-                lg:w-[calc(25%-1rem)]      /* Desktop: 4 cards */
+                w-[85%]          
+                sm:w-1/2         
+                lg:w-1/4        
                 snap-start
-                border rounded-s shadow p-4 hover:shadow-lg transition
-                "
+                border rounded shadow p-4 hover:shadow-lg transition
+              "
             >
-               
-                {course.image_url ? (
+              {course.image_url ? (
                 <img
-                    src={course.image_url}
-                    alt={course.title}
-                    className="w-full h-40 object-cover rounded mb-2"
+                  src={course.image_url}
+                  alt={course.title}
+                  className="w-full h-40 object-cover rounded mb-2"
                 />
-                ) : (
+              ) : (
                 <div className="w-full h-40 bg-gray-300 flex items-center justify-center rounded mb-4">
-                    <span className="text-gray-600">Sem imagem</span>
+                  <span className="text-gray-600 font-Noto">Sem imagem</span>
                 </div>
-                )}
+              )}
 
-                {/* Categorias */}
-                <div className="flex flex-wrap gap-2 mb-4">
+            
+              <div className="flex flex-nowrap gap-1 mb-3 overflow-hidden">
                 {course.categories?.map((cat, index) => (
-                    <span
+                  <span
                     key={index}
-                    className="border border-white text-blue-100 px-3 py-1 rounded text-sm font-medium">
+                    className="
+                      border border-white/60
+                      text-blue-100 font-Noto
+                      px-1.5 py-0.5 
+                      rounded 
+                      text-[10px] 
+                      font-normal 
+                      whitespace-nowrap
+                    "
+                  >
                     {cat}
-                    </span>
+                  </span>
                 ))}
-                </div>
+              </div>
 
-                
-                <h3 className="text-lg font-semibold mb-1">{course.title}</h3>
+              <h3 className="text-lg font-semibold mb-1 font-bold font-Noto">{course.title}</h3>
 
-                <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-300">
                 <strong>Por:</strong> {course.author}
-                </p>
+              </p>
             </div>
-            ))}
+          ))}
         </div>
+
+        <button
+          onClick={() => scroll("left")}
+          className="absolute top-1/2 -left-4 -translate-y-1/2 bg-white text-gray-700 shadow rounded-full p-2 hover:bg-gray-100"
+        >
+          ◀
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute top-1/2 -right-4 -translate-y-1/2 bg-white text-gray-700 shadow rounded-full p-2 hover:bg-gray-100"
+        >
+          ▶
+        </button>
+      </div>
     </section>
   );
 }

@@ -22,12 +22,12 @@ function Navbar() {
         </div>
 
         <ul className="hidden lg:flex gap-4 items-center">
-          <li><a href="#" className="text-[12px] font-bold text-white">CURSOS</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white">PROFESSORES</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white">SOBRE A UANE</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white">PARCERIAS</a></li>
+          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">CURSOS</a></li>
+          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">PROFESSORES</a></li>
+          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">SOBRE A UANE</a></li>
+          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">PARCERIAS</a></li>
           <li>
-             <a href="#" className="flex items-center gap-1 text-[12px] font-bold">
+             <a href="#" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
                <PiUserCircleFill className="text-xl" />
                PORTAL DO ALUNO
              </a>
@@ -61,7 +61,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
-                className="block text-[14px] font-bold hover:text-gray-200 transition-colors py-2"
+                className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 CURSOS
               </a>
@@ -70,7 +70,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
-                className="block text-[14px] font-bold hover:text-gray-200 transition-colors py-2"
+                className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 PROFESSORES
               </a>
@@ -79,7 +79,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
-                className="block text-[14px] font-bold hover:text-gray-200 transition-colors py-2"
+                className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 SOBRE A UANE
               </a>
@@ -88,13 +88,13 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
-                className="block text-[14px] font-bold hover:text-gray-200 transition-colors py-2"
+                className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 PARCERIAS
               </a>
             </li>
             <li>
-              <a onClick={closeMenu} href="#" className="flex items-center gap-1 text-[12px] font-bold">
+              <a onClick={closeMenu} href="#" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
                <PiUserCircleFill className="text-xl" />
                PORTAL DO ALUNO
              </a>

@@ -9,10 +9,10 @@ function Banner() {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 justify-between">
           <div className="flex-1 lg:max-w-2xl">
             <div className="flex gap-3 mb-6 overflow-x-auto no-scrollbar">
-              <span className="whitespace-nowrap border border-white text-blue-100 px-3 py-1 rounded text-sm font-medium">
+              <span className="whitespace-nowrap border border-white text-blue-100 text-[16px] px-3 py-1 rounded text-sm font-medium">
                 TÉCNICO
               </span>
-              <span className="whitespace-nowrap border border-white text-blue-100 px-3 py-1 rounded text-sm font-medium">
+              <span className="whitespace-nowrap border border-white text-blue-100 text-[16px] px-3 py-1 rounded text-sm font-medium">
                 TECNOLOGIA E PROFISSÃO
               </span>
             </div>
@@ -21,7 +21,7 @@ function Banner() {
               Secretaria Escolar
             </h1>
 
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-white text-[20px] font-extralight mb-8 font-Noto">
               O(a) profissional em Secretaria Escolar é peça-chave para a gestão 
               eficiente da escola, garantindo o funcionamento legal e organizado 
               da instituição. Responsável por gerenciar a documentação dos 
