@@ -33,7 +33,13 @@ cd backend
 composer install
 cp .env.example .env
 php artisan migrate --seed
+
+# Rodando o servidor Laravel (padrão)
 php artisan serve
+
+# ⚠️ Observação: Para rodar em rede local com host e porta específicos:
+php artisan serve --host=192.168.100.20 --port=8000
+
 ```
 ➡️ API disponível em: http://localhost:8000/api/courses
 
