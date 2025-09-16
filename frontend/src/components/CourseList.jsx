@@ -37,7 +37,7 @@ function CourseList() {
 
   return (
     <section className="container mx-auto px-6 md:px-8 py-6 relative" id="courses">
-      <h2 className="text-2xl font-bold mb-4 font-Noto text-[32px]">Cursos</h2>
+      <h2 className="text-2xl font-bold mb-4 font-Noto text-[32px]">Cursos ➡️</h2>
 
       <div className="relative">
         <div
