@@ -52,7 +52,7 @@ function Navbar() {
       </div>
 
    
-      <div className={`lg:hidden absolute top-16 left-0 right-0 bg-[#1F6482] border-t border-[#2a7a9a] transition-all duration-300 ease-in-out ${
+      <div className={`lg:hidden absolute top-16 left-0 right-0 bg-[#1F6482] border-t border-[#2a7a9a] transition-all duration-300 ease-in-out z-50 ${
         isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         <div className="container mx-auto px-6">
@@ -110,7 +110,7 @@ function Navbar() {
       
       {isMenuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[-1]"
+          className="lg:hidden fixed inset-0 z-40"
           onClick={closeMenu}
         ></div>
       )}

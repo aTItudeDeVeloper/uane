@@ -10,12 +10,10 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
           
-          {/* Logo */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-2 justify-center md:justify-start">
             <img src={uaneLogo} alt="Universidade Aberta do Nordeste" className="h-[60px] sm:h-[65px] md:h-[75px]" />
           </div>
 
-          {/* Informações */}
           <div>
             <h5 className="font-semibold mb-4 text-[18px] sm:text-[20px] md:text-[20px] font-Noto text-[#555555]">Informações</h5>
             <div className="space-y-2 sm:space-y-3">
@@ -36,7 +34,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* WhatsApp */}
           <div className="flex flex-col items-center md:items-start">
             <h5 className="font-semibold mb-4 text-[18px] sm:text-[20px] font-Noto text-[#555555]">Fale conosco</h5>
             <a
@@ -52,7 +49,6 @@ function Footer() {
             </a>
           </div>
 
-          {/* Redes sociais */}
           <div className="flex flex-col items-center md:items-start">
             <h5 className="font-semibold mb-4 text-[18px] sm:text-[20px] font-Noto text-[#555555]">Nos acompanhe nas redes sociais</h5>
             <div className="flex justify-center md:justify-start gap-3">
