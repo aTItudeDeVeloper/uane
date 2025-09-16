@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Statistics from '../components/Statistics';
 import InformationToDecide from '../components/InformationToDecide';
 import WhatYouWillLearn from '../components/WhatYouWillLearn';
+import Investment from '../components/Investment';
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <InformationToDecide />
       <WhatYouWillLearn />
       <CourseList />
+      <Investment />
       <Footer />
     </>
   );
