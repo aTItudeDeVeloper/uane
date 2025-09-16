@@ -1,14 +1,77 @@
-import React from 'react';
+import React, { useState } from "react";
+import { X } from "lucide-react";
 
-function Copy() {
-  return ( 
-    <div className="container mx-auto px-6 md:px-8 py-6 bg-[#1F6482] text-white flex flex-col sm:flex-col md:flex-row justify-between items-center gap-2 md:gap-0 h-auto md:h-16">
-      <p className="text-sm text-center">
-        Av. Aguanambi, 282 A - Joaquim Távora, Fortaleza - CE, 60055-402
-      </p>
-      <p className="text-sm text-center mt-8 md:mt-0">EXPEDIENTE</p>
-    </div>
+function ExpedienteModal() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const staff = [
+    { role: "Gerente Pedagógica", name: "Jôsy Braga Cavalcante" },
+    { role: "Coordenadora de Cursos", name: "Marisa Ferreira" },
+    { role: "Secretária Escolar", name: "Márcia Maria Doudement" },
+    { role: "Desenvolvedora Front-End", name: "Isabela Marques" },
+    { role: "Assistente Educacional", name: "Alisson Aragão" },
+    { role: "Assistente Educacional", name: "Ana Lívia Cavalcante" },
+    { role: "Estagiário(a)", name: "Bianka Sousa" },
+    { role: "DIGITAL - Head de Estratégia Digital", name: "Filipe Dummar" },
+    { role: "Gerente de Inovação / UX", name: "Brenda Câmara" },
+    { role: "UX/UI Designer", name: "Juliana Amaral Oliveira" },
+    { role: "Front-End", name: "Antônia Michele" },
+    { role: "Back-End", name: "Milton Paiva" },
+  ];
+
+  return (
+    <>
+      <div className="bg-[#1F6482] text-white py-6 flex flex-col md:flex-row justify-between items-center px-6 md:px-12">
+        <h5 className="text-sm text-center md:text-left text-white font-Noto font-light text-[16px]">
+          Av. Aguanambi, 282 A - Joaquim Távora, Fortaleza - CE, 60055-402
+        </h5>
+
+        <button
+          onClick={() => setIsOpen(true)}
+          className="cursor-pointer text-sm text-center mt-4 md:mt-0 text-white font-semibold text-[20px] border border-white px-3 py-1 hover:bg-white hover:text-[#1F6482] transition-colors duration-200"
+        >
+          EXPEDIENTE
+        </button>
+      </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-30 p-4">
+          <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            {/* Header com botão fechar */}
+            <div className="sticky top-0 bg-white rounded-t-xl p-6 pb-4 border-b border-gray-100 flex justify-between items-center">
+              <h2 className="text-2xl font-bold text-gray-800">
+                Expediente
+              </h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200"
+                aria-label="Fechar modal"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Conteúdo do modal */}
+            <div className="p-6 pt-4">
+              <div className="space-y-4 text-gray-700">
+                {staff.map((member, index) => (
+                  <div key={index} className="border-l-4 border-teal-500 pl-4 py-2">
+                    <p className="font-semibold text-gray-800 text-sm mb-1">
+                      {member.role}
+                    </p>
+                    <p className="text-gray-600">
+                      {member.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
-export default Copy;
+export default ExpedienteModal;
