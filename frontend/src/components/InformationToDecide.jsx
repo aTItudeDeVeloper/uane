@@ -52,7 +52,7 @@ function InformationToDecide() {
             >
              <span
                 className={`font-Noto ${
-                  isOpen ? "text-black" : "text-[#1F6482]"
+                  isOpen ? "text-black font-bold text-[18px]" : "text-[#1F6482] font-bold text-[18px]"
                 }`}
               >
                 {accordion.title}
