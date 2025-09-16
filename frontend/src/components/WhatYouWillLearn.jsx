@@ -55,7 +55,7 @@ function WhatYouWillLearn() {
   
     return (
       <div className="container mx-auto px-6 md:px-8 py-6 relative">
-        <h2 className="text-2xl font-bold mb-6 font-Noto text-[32px]">O que você vai aprender</h2>
+        <h2 className="text-[32px] md:text-[28px] sm:text-[24px] max-[470px]:text-[22px] max-[375px]:text-[20px]  max-[320px]:text-[18px] font-bold mb-6 font-Noto">O que você vai aprender</h2>
   
         {accordions.map((accordion, index) => {
           const isOpen = openIndex === index;
