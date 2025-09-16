@@ -7,6 +7,7 @@ import Statistics from '../components/Statistics';
 import InformationToDecide from '../components/InformationToDecide';
 import WhatYouWillLearn from '../components/WhatYouWillLearn';
 import Investment from '../components/Investment';
+import Copy from '../components/Copy';
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <CourseList />
       <Investment />
       <Footer />
+      <Copy />
     </>
   );
 }

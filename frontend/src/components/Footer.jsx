@@ -1,56 +1,72 @@
 import React from 'react';
+import uaneLogo from '../assets/uane-logo.png';
+import { Facebook, Instagram, Youtube } from "lucide-react";
+
+import whatsapp from '../assets/whatsapp.png';
+
 function Footer() {
   return (
-      <footer className="bg-[#DFDFDF] text-black py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-teal-700 font-bold text-sm">U</span>
-              </div>
-              <span className="font-bold text-xl">UANE</span>
-            </div>
+    <footer className="bg-[#DFDFDF] text-black py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
+        
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-2">
+            <img src={uaneLogo} alt="Universidade Aberta do Nordeste" className="h-[75px]" />
+          </div>
 
-            {/* Information */}
-            <div>
-              <h5 className="font-semibold mb-4">Information</h5>
-              <div className="space-y-3">
-                <a href="#" className="block text-teal-200 hover:text-white transition-colors text-sm">
-                  Frequently Asked Questions
-                </a>
-                <a href="#" className="block text-teal-200 hover:text-white transition-colors text-sm">
-                  Privacy Policy
-                </a>
-              </div>
+          <div>
+            <h5 className="font-semibold mb-4 text-[20px] font-Noto font-sembold text-[#555555]">Informações</h5>
+            <div className="space-y-3">
+              <a
+                href="https://fdr.org.br/uane/perguntas-frequentes/" target='_blank'
+                className="block text-[#138E98] font-Noto font-normal text-[16px] text-sm"
+              >
+                Perguntas Frequentes
+              </a>
+              <a
+                href="https://fdr.org.br/uane/politica-de-privacidade/" target='_blank'
+                className="block text-[#138E98] font-Noto font-normal text-[16px] text-sm"
+              >
+                Política de Privacidade
+              </a>
             </div>
+          </div>
 
-            {/* Contact */}
-            <div>
-              <h5 className="font-semibold mb-4">Get to know us</h5>
-              <p className="text-teal-200 font-semibold mb-4 text-sm">
-                📞 (85) 99332-8888
-              </p>
-            </div>
+          <div>
+            <h5 className="font-semibold mb-4 text-[20px] font-Noto font-semibold text-[#555555]">
+              Fale conosco
+            </h5>
+            <a
+              href="https://wa.me/558591231327"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <img src={whatsapp} alt="WhatsApp" className="w-5 h-5" />
+              <span className="text-[#138E98] font-Noto font-bold text-[20px] text-sm">
+                (85) 91231-327
+              </span>
+            </a>
+          </div>
 
-            {/* Social Media */}
-            <div>
-              <h5 className="font-semibold mb-4">Follow us on social media</h5>
-              <div className="flex gap-3">
-                <a href="#" className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                  {/* <Facebook size={16} /> */}
-                </a>
-                <a href="#" className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                  {/* <Instagram size={16} /> */}
-                </a>
-                <a href="#" className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                  {/* <Youtube size={16} /> */}
-                </a>
-              </div>
+
+          <div>
+            <h5 className="font-semibold mb-4 text-[20px] font-Noto text-[#555555]">Nos acompanhe nas redes sociais</h5>
+            <div className="flex justify-center md:justify-start gap-3">
+              <a href="https://www.facebook.com/fundacaodemocritorocha/" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                <Facebook size={16} className="text-white" />
+              </a>
+              <a href="https://www.instagram.com/fundacaodemocritorocha/" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                <Instagram size={16} className="text-white" />
+              </a>
+              <a href="https://www.youtube.com/@CanalFDR-oficial" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                <Youtube size={16} className="text-white" />
+              </a>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   );
 }
 
