@@ -88,7 +88,7 @@ function WhatYouWillLearn() {
                 }}
                 className="transition-max-height duration-300 ease-in-out overflow-hidden"
               >
-                <ul className="p-4 text-gray-700 list-disc pl-5 space-y-2">
+                <ul className="p-4 pl-5 space-y-2 font-Noto text-[16px] text-[#1E1E1E] font-light">
                   {accordion.content.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
