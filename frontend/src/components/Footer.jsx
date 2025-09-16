@@ -45,7 +45,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 justify-center md:justify-start"
             >
-              <img src={whatsapp} alt="WhatsApp" className="w-5 h-5" />
+              <img src={whatsapp} alt="WhatsApp" aria-label="WhatsApp" className="w-5 h-5" />
               <span className="text-[#138E98] font-Noto font-bold text-[16px] sm:text-[20px]">
                 (85) 91231-327
               </span>
@@ -56,13 +56,13 @@ function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <h5 className="font-semibold mb-4 text-[18px] sm:text-[20px] font-Noto text-[#555555]">Nos acompanhe nas redes sociais</h5>
             <div className="flex justify-center md:justify-start gap-3">
-              <a href="https://www.facebook.com/fundacaodemocritorocha/" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+              <a href="https://www.facebook.com/fundacaodemocritorocha/" aria-label="Facebook" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
                 <Facebook size={16} className="text-white" />
               </a>
-              <a href="https://www.instagram.com/fundacaodemocritorocha/" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+              <a href="https://www.instagram.com/fundacaodemocritorocha/" aria-label="Instagram" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
                 <Instagram size={16} className="text-white" />
               </a>
-              <a href="https://www.youtube.com/@CanalFDR-oficial" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+              <a href="https://www.youtube.com/@CanalFDR-oficial" aria-label="Youtube" target='_blank' className="bg-[#138E98] w-[36px] h-[36px] rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
                 <Youtube size={16} className="text-white" />
               </a>
             </div>

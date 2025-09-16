@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-[#1F6482] text-white relative">
+    <nav className="bg-[#1F6482] text-white relative" aria-label="Menu principal">
       <div className="container mx-auto px-6 md:px-8 flex justify-between items-center h-16">
       
         <div className="flex items-center">
@@ -22,12 +22,12 @@ function Navbar() {
         </div>
 
         <ul className="hidden lg:flex gap-4 items-center">
-          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">CURSOS</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">PROFESSORES</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">SOBRE A UANE</a></li>
-          <li><a href="#" className="text-[12px] font-bold text-white font-Noto">PARCERIAS</a></li>
+          <li><a href="#" role="button" className="text-[12px] font-bold text-white font-Noto">CURSOS</a></li>
+          <li><a href="#" role="button" className="text-[12px] font-bold text-white font-Noto">PROFESSORES</a></li>
+          <li><a href="#" role="button" className="text-[12px] font-bold text-white font-Noto">SOBRE A UANE</a></li>
+          <li><a href="#" role="button" className="text-[12px] font-bold text-white font-Noto">PARCERIAS</a></li>
           <li>
-             <a href="#" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
+             <a href="#" role="button" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
                <PiUserCircleFill className="text-xl" />
                PORTAL DO ALUNO
              </a>
@@ -61,6 +61,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
+                role="button"
                 className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 CURSOS
@@ -70,6 +71,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
+                role="button"
                 className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 PROFESSORES
@@ -79,6 +81,7 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
+                role="button"
                 className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 SOBRE A UANE
@@ -88,13 +91,14 @@ function Navbar() {
               <a 
                 href="#" 
                 onClick={closeMenu}
+                role="button"
                 className="block text-[14px] font-bold font-Noto hover:text-gray-200 transition-colors py-2"
               >
                 PARCERIAS
               </a>
             </li>
             <li>
-              <a onClick={closeMenu} href="#" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
+              <a onClick={closeMenu} href="#" role="button" className="flex items-center gap-1 text-[12px] font-bold font-Noto">
                <PiUserCircleFill className="text-xl" />
                PORTAL DO ALUNO
              </a>
